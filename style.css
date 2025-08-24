@@ -1,0 +1,81 @@
+body{
+    background-color: darkblue;
+}
+
+textarea{
+    font-size: 150%;
+    background-color: black;
+    color: white;
+
+    position: absolute;
+    resize: none;
+
+    width: 800px;
+    height: 300px;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1{
+    text-align: center;
+    font-size: 250%;
+    color: yellow;
+
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+
+    animation: appearTitle 2s forwards;
+}
+
+@keyframes appearTitle{
+    0%{
+        font-size: 1%;
+        color: darkblue;
+    }
+    100%{
+        font-size: 250%;
+        color: yellow;
+    }
+}
+
+button{
+    cursor: pointer;
+    background-color: white;
+    font-size: 250%;
+
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes changeToLime{
+    0%{background-color: white;}
+    100%{background-color: lime;}
+}
+
+@keyframes changeToWhite{
+    0%{background-color: lime;}
+    100%{background-color: white;}
+}
+
+div{
+    text-align: center;
+    font-size: 150%;
+    color: white;
+
+    position: absolute;
+    left: 50%;
+    top: 130%;
+    transform: translate(-50%, -50%);
+}
+
+a{
+    position: absolute;
+    color: white;
+    font-size: 150%;
+}
