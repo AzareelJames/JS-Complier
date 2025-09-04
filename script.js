@@ -1,5 +1,3 @@
-import data from "./data.json" with {type: "json"};
-
 function Exec(){
     const Note =
     `
@@ -22,41 +20,41 @@ and add a new issue.
     const exec = document.getElementById(`exec`);
     
     exec.addEventListener(`mouseover`, () => {
-        exec.style.animation = `changeToLime ${data[`seconds button color changes`]}s forwards`;
+        exec.style.animation = `changeToLime 0.3s forwards`;
     });
 
     exec.addEventListener(`mouseleave`, () => {
-        exec.style.animation = `changeToWhite ${data[`seconds button color changes`]}s forwards`;
+        exec.style.animation = `changeToWhite 0.3s forwards`;
     });
 
     exec.onclick = () => {
-        Console.innerText = ``;
+        Console.value = ``;
         Exec();
     };
 
-    const Console = document.createElement(`div`);
+    const Console = document.getElementById(`Console`);
     document.body.appendChild(Console);
 
     console.log = (log) => {
-        Console.innerText += `\n${log}`;}
+        Console.value += `\n${log}`;}
 
     console.clear = () => {
-        Console.innerText = `[console was cleared]`;
+        Console.value = `[console was cleared]`;
     }
     
     console.dir = (log) => {
-        Console.innerText += `\n${log}`;
+        Console.value += `\n${log}`;
     }
 
     console.warn = (log) => {
-        Console.innerText += `\n[(⚠️) ${log}]`;
+        Console.value += `\n[(⚠️) ${log}]`;
     }
 
     console.error = (log) => {
-        Console.innerText += `\n[(❌) ${log}]`;
+        Console.value += `\n[(❌) ${log}]`;
     }
 
     console.info = (log) => {
-        Console.innerText += `\n[(i) ${log}]`;
+        Console.value += `\n[(i) ${log}]`;
     }
 }
